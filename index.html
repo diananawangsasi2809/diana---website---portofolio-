@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Diana Nawang Sasi 🎀</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #fff0f6, #ffc1dc, #ffe4f0);
+    color: #813653;
+    overflow-x: hidden;
+}
+
+/* NAVIGASI */
+header {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: 0 4px 15px #f5b3d0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #e84393;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #bd4d80;
+    margin: 0 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff1493;
+}
+
+/* BERANDA */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    padding: 55px 8%;
+    text-align: center;
+    animation: muncul 1.2s ease;
+}
+
+.foto {
+    width: 245px;
+    height: 300px;
+    object-fit: cover;
+    border: 8px solid white;
+    border-radius: 45% 45% 25% 25%;
+    box-shadow: 0 8px 25px #e879b0;
+    animation: melayang 3s infinite ease-in-out;
+}
+
+.hero h1 {
+    color: #e84393;
+    font-size: clamp(28px, 5vw, 43px);
+    margin: 15px 0;
+}
+
+.hero p {
+    max-width: 480px;
+    line-height: 1.8;
+}
+
+.label {
+    color: #d63384;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* TOMBOL */
+.tombol {
+    display: inline-block;
+    margin: 15px 5px 0;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: linear-gradient(120deg, #ff9bc9, #e84393);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px #ef9fc3;
+    transition: 0.3s;
+}
+
+.tombol:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 8px 20px #df75a7;
+}
+
+/* BAGIAN WEBSITE */
+section {
+    padding: 60px 8%;
+}
+
+.judul {
+    text-align: center;
+    font-size: 30px;
+    color: #e84393;
+    margin-bottom: 30px;
+}
+
+.kartu {
+    background: rgba(255, 255, 255, 0.88);
+    border: 2px solid #ffd0e5;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 5px 18px #f4b5d2;
+    transition: 0.3s;
+}
+
+.kartu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px #eaa0c4;
+}
+
+/* BIODATA */
+.biodata {
+    max-width: 750px;
+    margin: auto;
+    line-height: 2.2;
+}
+
+.biodata strong {
+    color: #d63384;
+}
+
+/* KEAHLIAN */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 22px;
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill span {
+    display: block;
+    font-size: 43px;
+    margin-bottom: 12px;
+}
+
+.skill h3 {
+    color: #df4f99;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    line-height: 1.7;
+}
+
+/* IMPIAN */
+.impian {
+    max-width: 950px;
+    margin: auto;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* MEDIA SOSIAL */
+.sosmed {
+    text-align: center;
+}
+
+.sosmed p {
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    background: #f8a9cf;
+    padding: 25px;
+    text-align: center;
+    color: #813653;
+    line-height: 1.8;
+}
+
+/* ANIMASI HIASAN */
+.hiasan {
+    position: fixed;
+    bottom: -35px;
+    font-size: 22px;
+    animation: naik 7s linear forwards;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes melayang {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes naik {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    15% { opacity: 0.8; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* TAMPILAN HP */
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 14px;
+    }
+
+    .hero {
+        gap: 25px;
+    }
+
+    .foto {
+        width: 195px;
+        height: 240px;
+    }
+
+    .judul {
+        font-size: 25px;
+    }
+
+    .kartu {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎀 Diana's Portfolio</div>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#impian">Impian</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+</header>
+
+<!-- BERANDA -->
+<div class="hero" id="beranda">
+
+    <div>
+        <img
+            class="foto"
+            src="https://cdn.phototourl.com/member/2026-10-15-b1fad1c5-7475-4190-9d41-233fcb8b68c0.jpg"
+            alt="Foto Diana Nawang Sasi">
+    </div>
+
+    <div>
+        <p class="label">🌸 WELCOME TO MY WEBSITE 🌸</p>
+
+        <h1>Hai, Aku Diana! 💗</h1>
+
+        <p>
+            Namaku Diana Nawang Sasi. Aku siswi jurusan TKJ
+            yang suka memasak, menggambar, dan belajar teknologi.
+            Aku punya banyak impian dan akan terus berusaha
+            mewujudkannya.
+        </p>
+
+        <a href="#biodata" class="tombol">
+            Kenali Aku ✨
+        </a>
+    </div>
+
+</div>
+
+<!-- BIODATA -->
+<section id="biodata">
+    <h2 class="judul">🎀 Biodata Saya 🎀</h2>
+
+    <div class="kartu biodata">
+        <p><strong>👩 Nama:</strong> Diana Nawang Sasi</p>
+        <p><strong>🏫 Sekolah:</strong> SMK Panca Bhakti Rakit</p>
+        <p><strong>💻 Jurusan:</strong> Teknik Komputer dan Jaringan (TKJ)</p>
+        <p><strong>🍳 Hobi:</strong> Memasak dan menggambar</p>
+        <p><strong>📍 Alamat:</strong> Kincang RT 01/RW 05</p>
+        <p><strong>🌟 Cita-cita:</strong> Pengusaha dan Polwan</p>
+    </div>
+</section>
+
+<!-- KEAHLIAN -->
+<section id="keahlian">
+    <h2 class="judul">💻 Keahlian Saya 💻</h2>
+
+    <div class="grid">
+
+        <div class="kartu skill">
+            <span>🖥️</span>
+            <h3>Komputer</h3>
+            <p>Mempelajari perangkat komputer dan penggunaannya.</p>
+        </div>
+
+        <div class="kartu skill">
+            <span>🔌</span>
+            <h3>Fiber Optik</h3>
+            <p>Mengenal kabel dan instalasi jaringan fiber optik.</p>
+        </div>
+
+        <div class="kartu skill">
+            <span>🌐</span>
+            <h3>Cisco Packet Tracer</h3>
+            <p>Belajar membuat simulasi dan topologi jaringan komputer.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- IMPIAN -->
+<section id="impian">
+    <h2 class="judul">🌷 Impian dan Harapan 🌷</h2>
+
+    <div class="kartu impian">
+        <p>
+            Impian saya adalah menjadi orang yang sukses, mandiri,
+            dan kaya agar bisa membahagiakan kedua orang tua serta
+            membanggakan keluarga. Saya ingin memiliki pekerjaan
+            yang baik di bidang teknologi informasi, mengembangkan
+            kemampuan di bidang komputer, dan suatu hari nanti
+            menjadi pengusaha sukses.
+        </p>
+
+        <br>
+
+        <p>
+            Saya juga ingin memiliki rumah sendiri, kehidupan yang
+            nyaman, serta bisa berkeliling dunia dan mengunjungi
+            tempat-tempat yang indah. Saya percaya bahwa setiap
+            impian bisa diwujudkan dengan doa, usaha, kerja keras,
+            dan semangat pantang menyerah.
+        </p>
+
+        <br>
+
+        <p>
+            Saya akan terus belajar dan berusaha menjadi pribadi
+            yang lebih baik agar suatu hari nanti bisa meraih semua
+            impian saya dan memberikan kehidupan yang lebih baik
+            untuk keluarga tercinta. 💖
+        </p>
+    </div>
+</section>
+
+<!-- MEDIA SOSIAL -->
+<section id="kontak">
+    <h2 class="judul">💌 Media Sosial Saya 💌</h2>
+
+    <div class="kartu sosmed">
+        <p>
+            Terima kasih sudah mengunjungi website portofolio saya!
+            Jangan lupa mampir ke media sosial saya, ya. 🌸
+        </p>
+
+        <a
+            href="https://www.instagram.com/diananwngsasi/"
+            class="tombol"
+            target="_blank"
+            rel="noopener noreferrer">
+            📸 Instagram
+        </a>
+
+        <a
+            href="https://www.tiktok.com/@lluv_diana"
+            class="tombol"
+            target="_blank"
+            rel="noopener noreferrer">
+            🎵 TikTok
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>Made with 💗 by Diana Nawang Sasi</p>
+    <p>© 2026 | My Pink Portfolio 🎀</p>
+    <p>Dream big, work hard, and never give up! 🌷</p>
+</footer>
+
+<script>
+const hiasan = ["💗", "💕", "🌸", "✨", "🎀"];
+
+function buatHiasan() {
+    const elemen = document.createElement("div");
+
+    elemen.className = "hiasan";
+    elemen.textContent =
+        hiasan[Math.floor(Math.random() * hiasan.length)];
+
+    elemen.style.left = Math.random() * 100 + "vw";
+    elemen.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(elemen);
+
+    setTimeout(() => elemen.remove(), 10000);
+}
+
+setInterval(buatHiasan, 700);
+</script>
+
+</body>
+  </html>
